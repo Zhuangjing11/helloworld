@@ -1,0 +1,1 @@
+我是在Linux上遇到这种问题，更改代码后不会自动更新， 我所用的开发工具是webstrom，提示The current inotify(7) watch limit is too low，然后我在/etc目录下的sysctl.conf文件的最后一行添加了fs.inotify.max_user_watches = 524288，然后使用命令sudo sysctl -p，再重启webstrom，然后每次更改代码就会自动更新了。希望对你有所帮助.
